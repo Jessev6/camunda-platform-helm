@@ -21,6 +21,14 @@ data:
         # Elasticsearch full url
         url: {{ .Values.global.elasticsearch.url }}
         {{- end }}
+        {{- if .Values.global.elasticsearch.username }}
+        # Elasticsearch Username for Basic Authentication
+        username: {{ .Values.global.elasticsearch.username }}
+        {{- end }}
+        {{- if .Values.global.elasticsearch.password }}
+        # Elasticsearch Password for Basic Authentication
+        password: {{ .Values.global.elasticsearch.password }}
+        {{- end }}
       # Zeebe instance
       zeebe:
         # Broker contact point
