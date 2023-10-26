@@ -98,6 +98,11 @@ global:
     clusterName: "elasticsearch"
     ## @param global.elasticsearch.prefix Elasticsearch.prefix defines the prefix which is used by the Zeebe Elasticsearch Exporter to create Elasticsearch indexes
     prefix: zeebe-record
+    ## @param global.elasticsearch.username Elasticsearch.username defines the username used for basic authentication (optional)
+    username:
+    ## @param global.elasticsearch.password Elasticsearch.password defines the password used for basic authentication (optional)
+    password:
+    
   ## @param global.zeebeClusterName ZeebeClusterName defines the cluster name for the Zeebe cluster. All Zeebe pods get this prefix in their name and the brokers uses that as cluster name.
   zeebeClusterName: "{{ .Release.Name }}-zeebe"
   ## @param global.zeebePort defines the port which is used for the Zeebe Gateway. This port accepts the GRPC Client messages and forwards them to the Zeebe Brokers.
